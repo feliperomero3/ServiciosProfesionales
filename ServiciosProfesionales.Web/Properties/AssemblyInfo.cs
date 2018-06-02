@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Felipe Romero")]
 [assembly: AssemblyProduct("Servicios Profesionales")]
-[assembly: AssemblyCopyright("© 2018 Felipe Romero")]
+[assembly: AssemblyCopyright("Copyright © 2018 Felipe Romero")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

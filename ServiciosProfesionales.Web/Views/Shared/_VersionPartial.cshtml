@@ -7,7 +7,7 @@
     {
         var product = assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), true).FirstOrDefault() as AssemblyProductAttribute;
         var fields = gitVersionInformationType.GetFields();
-        var informationalVersion = fields.FirstOrDefault(f => f.Name.Equals("InformationalVersion"));
+        var informationalVersion = fields.FirstOrDefault(f => f.Name.Equals("FullSemVer"));
 
         <span>@string.Format("{0} v{1}", product.Product, informationalVersion.GetValue(null))</span>
     }
