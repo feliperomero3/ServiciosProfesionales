@@ -12,8 +12,7 @@ namespace ServiciosProfesionales.Web.Identity
     {
         public ApplicationUserManager(IUserStore<ApplicationUser> store,
             IDataProtectionProvider dataProtectionProvider,
-            IIdentityMessageService emailService,
-            IIdentityMessageService smsService)
+            IIdentityMessageService emailService)
             : base(store)
         {
             // Configure validation logic for usernames
@@ -53,7 +52,7 @@ namespace ServiciosProfesionales.Web.Identity
             });
 
             EmailService = emailService;
-            SmsService = smsService;
+            SmsService = new SmsService();
 
             // Generate user tokens to confirm account registration and for password reset tokens
             if (dataProtectionProvider != null)

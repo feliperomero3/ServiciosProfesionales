@@ -4,9 +4,11 @@ using Microsoft.Owin.Security;
 using System;
 using System.Data.Entity;
 using System.Web;
+using ServiciosProfesionales.Web.Identity;
 using Unity;
 using Unity.Injection;
 using ServiciosProfesionales.Web.Models;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace ServiciosProfesionales.Web
 {
@@ -49,10 +51,16 @@ namespace ServiciosProfesionales.Web
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
+            //container.RegisterType<ApplicationUserManager>();
+            //container.RegisterType<ApplicationSignInManager>();
+            //container.RegisterType<IdentityFactoryOptions<ApplicationUserManager>>();
+
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
             container.RegisterType<DbContext, ApplicationDbContext>();
             container.RegisterType<IAuthenticationManager>(
                 new InjectionFactory(context => HttpContext.Current.GetOwinContext().Authentication));
+            container.RegisterType<IIdentityMessageService, EmailService>();
+
             //container.RegisterType<IApplicantRepository, ApplicantRepository>();
         }
     }
