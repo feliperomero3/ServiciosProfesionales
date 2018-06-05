@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace ServiciosProfesionales.Web.Models
+namespace ServiciosProfesionales.Web.Identity
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

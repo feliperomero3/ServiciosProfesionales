@@ -7,7 +7,6 @@ using System.Web;
 using ServiciosProfesionales.Web.Identity;
 using Unity;
 using Unity.Injection;
-using ServiciosProfesionales.Web.Models;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace ServiciosProfesionales.Web

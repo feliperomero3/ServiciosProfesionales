@@ -9,7 +9,6 @@ using Microsoft.Owin.Security.Google;
 using Owin;
 using Unity;
 using ServiciosProfesionales.Web.Identity;
-using ServiciosProfesionales.Web.Models;
 
 namespace ServiciosProfesionales.Web
 {
