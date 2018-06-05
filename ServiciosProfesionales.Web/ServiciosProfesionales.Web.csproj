@@ -181,13 +181,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Identity\ApplicationSignInManager.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Identity\EmailService.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Identity\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
@@ -197,13 +193,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Identity\ApplicationDbContext.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\ConfigureTwoFactorViewModel.cs" />
     <Compile Include="ViewModels\FactorViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="Identity\ApplicationUser.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
     <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
@@ -295,6 +289,12 @@
     </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiciosProfesionales.DataAccess\ServiciosProfesionales.DataAccess.csproj">
+      <Project>{6E5F99AC-F3E3-4AFB-926E-618F9EFD4DB1}</Project>
+      <Name>ServiciosProfesionales.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

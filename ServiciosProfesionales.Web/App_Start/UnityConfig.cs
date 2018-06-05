@@ -4,10 +4,9 @@ using Microsoft.Owin.Security;
 using System;
 using System.Data.Entity;
 using System.Web;
-using ServiciosProfesionales.Web.Identity;
 using Unity;
 using Unity.Injection;
-using Microsoft.AspNet.Identity.Owin;
+using ServiciosProfesionales.DataAccess.Identity;
 
 namespace ServiciosProfesionales.Web
 {
