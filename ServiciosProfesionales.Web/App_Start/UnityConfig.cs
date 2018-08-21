@@ -7,6 +7,7 @@ using System.Web;
 using Unity;
 using Unity.Injection;
 using ServiciosProfesionales.DataAccess.Identity;
+using Unity.AspNet.Mvc;
 
 namespace ServiciosProfesionales.Web
 {
@@ -49,12 +50,12 @@ namespace ServiciosProfesionales.Web
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
-            //container.RegisterType<ApplicationUserManager>();
-            //container.RegisterType<ApplicationSignInManager>();
+            container.RegisterType<ApplicationUserManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ApplicationSignInManager>(new PerRequestLifetimeManager());
             //container.RegisterType<IdentityFactoryOptions<ApplicationUserManager>>();
 
-            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
-            container.RegisterType<DbContext, ApplicationDbContext>();
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new PerRequestLifetimeManager());
+            container.RegisterType<DbContext, ApplicationDbContext>(new PerRequestLifetimeManager());
             container.RegisterType<IAuthenticationManager>(
                 new InjectionFactory(context => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IIdentityMessageService, EmailService>();
