@@ -6,8 +6,8 @@ using System.Data.Entity;
 using System.Web;
 using Unity;
 using Unity.Injection;
-using ServiciosProfesionales.DataAccess.Identity;
 using Unity.AspNet.Mvc;
+using ServiciosProfesionales.DataAccess.Identity;
 
 namespace ServiciosProfesionales.Web
 {
@@ -52,15 +52,11 @@ namespace ServiciosProfesionales.Web
 
             container.RegisterType<ApplicationUserManager>(new PerRequestLifetimeManager());
             container.RegisterType<ApplicationSignInManager>(new PerRequestLifetimeManager());
-            //container.RegisterType<IdentityFactoryOptions<ApplicationUserManager>>();
-
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new PerRequestLifetimeManager());
             container.RegisterType<DbContext, ApplicationDbContext>(new PerRequestLifetimeManager());
-            container.RegisterType<IAuthenticationManager>(
+            container.RegisterType<IAuthenticationManager>(new PerRequestLifetimeManager(),
                 new InjectionFactory(context => HttpContext.Current.GetOwinContext().Authentication));
-            container.RegisterType<IIdentityMessageService, EmailService>();
-
-            //container.RegisterType<IApplicantRepository, ApplicantRepository>();
+            container.RegisterType<IIdentityMessageService, EmailService>(new PerRequestLifetimeManager());
         }
     }
 }
