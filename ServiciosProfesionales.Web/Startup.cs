@@ -1,7 +1,5 @@
 ﻿using Microsoft.Owin;
-using Microsoft.Owin.Security.DataProtection;
 using Owin;
-using Unity.Lifetime;
 
 [assembly: OwinStartup(typeof(ServiciosProfesionales.Web.Startup))]
 namespace ServiciosProfesionales.Web
@@ -10,9 +8,6 @@ namespace ServiciosProfesionales.Web
     {
         public void Configuration(IAppBuilder app)
         {
-            //UnityConfig.Container.RegisterInstance(typeof(IDataProtectionProvider), 
-            //    null, app.GetDataProtectionProvider(), new TransientLifetimeManager());
-
             ConfigureAuth(app);
         }
     }

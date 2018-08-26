@@ -4,10 +4,10 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
-using Microsoft.Owin.Security.Google;
 using Owin;
 using ServiciosProfesionales.DataAccess.Identity;
 using Unity;
+using Unity.AspNet.Mvc;
 
 namespace ServiciosProfesionales.Web
 {
@@ -16,11 +16,7 @@ namespace ServiciosProfesionales.Web
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
-            UnityConfig.Container.RegisterInstance(app.GetDataProtectionProvider());
-
-            // Configure the user manager and signin manager to use a single instance per request
-            //app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationUserManager>());
-            //app.CreatePerOwinContext(() => DependencyResolver.Current.GetService<ApplicationSignInManager>());
+            UnityConfig.Container.RegisterInstance(app.GetDataProtectionProvider(), new PerRequestLifetimeManager());
 
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
