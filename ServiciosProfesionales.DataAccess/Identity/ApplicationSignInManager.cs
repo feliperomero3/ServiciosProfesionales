@@ -9,7 +9,8 @@ namespace ServiciosProfesionales.DataAccess.Identity
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
         public ApplicationSignInManager(ApplicationUserManager userManager,
-            IAuthenticationManager authenticationManager) : base(userManager, authenticationManager)
+            IAuthenticationManager authenticationManager) 
+            : base(userManager, authenticationManager)
         {
         }
 
