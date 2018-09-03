@@ -195,6 +195,7 @@
     </Compile>
     <Compile Include="DataContext\ApplicationDbContext.cs" />
     <Compile Include="Identity\ApplicationSignInManager.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Identity\EmailService.cs" />
