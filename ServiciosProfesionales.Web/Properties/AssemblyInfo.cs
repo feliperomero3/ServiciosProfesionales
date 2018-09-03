@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ServiciosProfesionales.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Felipe Romero")]
-[assembly: AssemblyProduct("Servicios Profesionales")]
-[assembly: AssemblyCopyright("Copyright © 2018 Felipe Romero")]
+[assembly: AssemblyCompany("Hewlett-Packard Company")]
+[assembly: AssemblyProduct("ServiciosProfesionales.Entities")]
+[assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

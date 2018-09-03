@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ServiciosProfesionales.Domain")]
+[assembly: AssemblyTitle("ServiciosProfesionales.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Felipe Romero")]
-[assembly: AssemblyProduct("Servicios Profesionales")]
-[assembly: AssemblyCopyright("Copyright © 2018 Felipe Romero")]
+[assembly: AssemblyCompany("Hewlett-Packard Company")]
+[assembly: AssemblyProduct("ServiciosProfesionales.Entities")]
+[assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a64dc1dd-2b7f-492b-8831-1cf8a94c24e1")]
+[assembly: Guid("1820d8c0-02d8-41a8-a2cf-602e15e47c10")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("0.1.*")]
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
