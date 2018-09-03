@@ -7,7 +7,7 @@ using System.Web;
 using Unity;
 using Unity.Injection;
 using Unity.AspNet.Mvc;
-using ServiciosProfesionales.DataAccess.Identity;
+using ServiciosProfesionales.Web.Identity;
 
 namespace ServiciosProfesionales.Web
 {

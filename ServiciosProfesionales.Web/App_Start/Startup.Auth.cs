@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Owin;
-using ServiciosProfesionales.DataAccess.Identity;
 using Unity;
 using Unity.AspNet.Mvc;
+using ServiciosProfesionales.Web.Identity;
 
 namespace ServiciosProfesionales.Web
 {

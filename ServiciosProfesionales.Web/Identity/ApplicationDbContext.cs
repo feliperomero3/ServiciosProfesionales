@@ -2,14 +2,14 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace ServiciosProfesionales.DataAccess.Identity
+namespace ServiciosProfesionales.Web.Identity
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
         {
-            Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
+            //Database.SetInitializer(
+            //    new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

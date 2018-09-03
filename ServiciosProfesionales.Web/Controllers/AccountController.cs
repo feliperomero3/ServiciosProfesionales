@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ServiciosProfesionales.DataAccess.Identity;
+using ServiciosProfesionales.Web.Identity;
 using ServiciosProfesionales.Web.ViewModels;
 
 namespace ServiciosProfesionales.Web.Controllers
