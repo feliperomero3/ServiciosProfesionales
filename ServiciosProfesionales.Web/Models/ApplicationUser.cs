@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace ServiciosProfesionales.Web.Identity
+namespace ServiciosProfesionales.Web.Models
 {
     public class ApplicationUser : IdentityUser
     {

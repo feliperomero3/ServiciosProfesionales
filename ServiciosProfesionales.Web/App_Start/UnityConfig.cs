@@ -4,10 +4,12 @@ using Microsoft.Owin.Security;
 using System;
 using System.Data.Entity;
 using System.Web;
+using ServiciosProfesionales.Web.DataContext;
 using Unity;
 using Unity.Injection;
 using Unity.AspNet.Mvc;
 using ServiciosProfesionales.Web.Identity;
+using ServiciosProfesionales.Web.Models;
 
 namespace ServiciosProfesionales.Web
 {

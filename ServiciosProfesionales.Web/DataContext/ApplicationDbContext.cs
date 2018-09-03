@@ -1,8 +1,10 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ServiciosProfesionales.Web.Identity;
+using ServiciosProfesionales.Web.Models;
 
-namespace ServiciosProfesionales.Web.Identity
+namespace ServiciosProfesionales.Web.DataContext
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

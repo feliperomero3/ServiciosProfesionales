@@ -8,6 +8,7 @@ using Owin;
 using Unity;
 using Unity.AspNet.Mvc;
 using ServiciosProfesionales.Web.Identity;
+using ServiciosProfesionales.Web.Models;
 
 namespace ServiciosProfesionales.Web
 {
