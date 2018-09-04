@@ -19,10 +19,10 @@ namespace ServiciosProfesionales.Web.DataContext
 
             modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
 
-            modelBuilder.Entity<IdentityUser>().ToTable("AspNetUser", "Identity");
+            modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUser", "Identity");
             modelBuilder.Entity<IdentityRole>().ToTable("AspNetRole", "Identity");
-            modelBuilder.Entity<IdentityUserLogin>().ToTable("AspNetUserLogin");
-            modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole");
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("AspNetUserLogin", "Identity");
+            modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole", "Identity");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("AspNetUserClaim", "Identity");
 
         }
