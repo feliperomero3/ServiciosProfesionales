@@ -15,7 +15,9 @@ namespace ServiciosProfesionales.Web.Controllers
         private readonly ApplicationSignInManager _signInManager;
         private readonly IAuthenticationManager _authenticationManager;
 
-        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager)
+        public ManageController(ApplicationUserManager userManager,
+            ApplicationSignInManager signInManager,
+            IAuthenticationManager authenticationManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
