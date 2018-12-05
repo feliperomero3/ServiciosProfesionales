@@ -300,7 +300,10 @@ namespace ServiciosProfesionales.Web.Controllers
         {
             if (disposing)
             {
-                _userManager?.Dispose();
+                if (_userManager != null)
+                {
+                    _userManager.Dispose();
+                }
             }
 
             base.Dispose(disposing);

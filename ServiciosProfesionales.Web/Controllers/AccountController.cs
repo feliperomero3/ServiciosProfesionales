@@ -382,8 +382,15 @@ namespace ServiciosProfesionales.Web.Controllers
         {
             if (disposing)
             {
-                _userManager?.Dispose();
-                _signInManager?.Dispose();
+                if (_userManager != null)
+                {
+                    _userManager.Dispose();
+                }
+
+                if (_signInManager != null)
+                {
+                    _signInManager.Dispose();
+                }
             }
 
             base.Dispose(disposing);
