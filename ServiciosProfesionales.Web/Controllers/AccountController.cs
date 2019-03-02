@@ -20,11 +20,11 @@ namespace ServiciosProfesionales.Web.Controllers
 
         public AccountController(ApplicationUserManager userManager,
             ApplicationSignInManager signInManager,
-            IAuthenticationManager autheticationManager)
+            IAuthenticationManager authenticationManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _authenticationManager = autheticationManager;
+            _authenticationManager = authenticationManager;
         }
 
         //
