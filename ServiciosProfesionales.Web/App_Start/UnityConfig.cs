@@ -1,15 +1,15 @@
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Owin.Security;
 using System;
 using System.Data.Entity;
 using System.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using ServiciosProfesionales.Web.DataContext;
-using Unity;
-using Unity.Injection;
-using Unity.AspNet.Mvc;
 using ServiciosProfesionales.Web.Identity;
 using ServiciosProfesionales.Web.Models;
+using Unity;
+using Unity.AspNet.Mvc;
+using Unity.Injection;
 
 namespace ServiciosProfesionales.Web
 {
@@ -30,7 +30,11 @@ namespace ServiciosProfesionales.Web
         /// <summary>
         /// Configured Unity Container.
         /// </summary>
-        public static IUnityContainer Container => container.Value;
+        public static IUnityContainer Container
+        {
+            get { return container.Value; }
+        }
+
         #endregion
 
         /// <summary>
