@@ -7,12 +7,6 @@ namespace ServiciosProfesionales.Web.DataContext
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-        {
-            //Database.SetInitializer(
-            //    new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
-        }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,7 +18,6 @@ namespace ServiciosProfesionales.Web.DataContext
             modelBuilder.Entity<IdentityUserLogin>().ToTable("AspNetUserLogin", "Identity");
             modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole", "Identity");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("AspNetUserClaim", "Identity");
-
         }
     }
 }
