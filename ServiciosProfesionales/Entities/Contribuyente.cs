@@ -5,7 +5,7 @@ namespace ServiciosProfesionales.Entities
     public class Contribuyente
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public string Rfc { get; set; }
         public string Nombre { get; set; }
         public string Domicilio { get; set; }
