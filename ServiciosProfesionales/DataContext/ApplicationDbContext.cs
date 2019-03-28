@@ -24,7 +24,7 @@ namespace ServiciosProfesionales.DataContext
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUser", "Identity");
             modelBuilder.Entity<IdentityRole>().ToTable("AspNetRole", "Identity");
