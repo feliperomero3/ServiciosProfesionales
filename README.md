@@ -1,6 +1,6 @@
 # Servicios Profesionales
 
-Aplicación Web basada en ASP.NET MVC 5 con Entity Framework 6.
+Aplicación Web basada en ASP.NET MVC 5 con Entity Framework 6 y ASP.NET Identity 2.
 
 ## Introducción
 
@@ -15,16 +15,26 @@ pagos provisionales de la Secretaría de Hacienda y Crédito Público en México
 
 ## Requisitos funcionales
 
-  1. Manejar múltiples RFC.
+  1. Manejar un solo RFC.
   2. Administrar cartera de clientes.
-  3. Gestión de catálogos de servicios, impuestos y series.
+  3. Gestión de catálogos de servicios, impuestos, series y proveedores.
   4. Generar reporte de ingresos por periodo y ejercicio.
   5. Generar reporte de gastos por periodo y ejercicio.
 
-## Requisitos de sistema
+## Limitaciones
 
-  1. Visual Studio 2015 o superior
-  2. .NET Framework 4.6.2 o superior
+  1. No es Multi-Empresa o Multi-RFC.
+  2. // TODO
+
+## Requisitos de sistema en desarrollo
+
+  1. Visual Studio 2013 o superior
+
+## Requisitos de sistema en produccíón
+
+  1. .NET Framework 4.6.2 o superior
+  2. SQL Server 2008 o superior
+  3. IIS 8.0 o superior
 
 ## Autor
 

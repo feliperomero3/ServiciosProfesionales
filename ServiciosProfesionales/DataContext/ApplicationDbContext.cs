@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ServiciosProfesionales.Entities;
 using ServiciosProfesionales.Migrations;
 using ServiciosProfesionales.Models;
 
@@ -12,6 +13,12 @@ namespace ServiciosProfesionales.DataContext
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
+
+        public DbSet<Contribuyente> Contribuyentes { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Ingreso> Ingresos { get; set; }
+        public DbSet<Servicio> Servicios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
