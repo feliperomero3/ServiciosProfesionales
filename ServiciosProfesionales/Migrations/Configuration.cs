@@ -8,6 +8,7 @@ namespace ServiciosProfesionales.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "ServiciosProfesionales.Migrations.Configuration";
         }
 
         protected override void Seed(ApplicationDbContext context)
