@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ServiciosProfesionales.DataContext.Configurations;
 using ServiciosProfesionales.Entities;
 using ServiciosProfesionales.Migrations;
 using ServiciosProfesionales.Models;
@@ -31,6 +32,11 @@ namespace ServiciosProfesionales.DataContext
             modelBuilder.Entity<IdentityUserLogin>().ToTable("AspNetUserLogin", "Identity");
             modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole", "Identity");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("AspNetUserClaim", "Identity");
+
+            modelBuilder.Configurations.Add(new ContribuyenteConfiguration());
+            modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new FacturaConfiguration());
+            modelBuilder.Configurations.Add(new ServicioConfiguration());
         }
     }
 }

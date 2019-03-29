@@ -190,6 +190,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataContext\Configurations\ClienteConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\ContribuyenteConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\FacturaConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\ServicioConfiguration.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Contribuyente.cs" />
     <Compile Include="Entities\Factura.cs" />
@@ -203,6 +207,10 @@
     <Compile Include="Migrations\201809042137085_InitialCreate.cs" />
     <Compile Include="Migrations\201809042137085_InitialCreate.Designer.cs">
       <DependentUpon>201809042137085_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903290108545_Entities.cs" />
+    <Compile Include="Migrations\201903290108545_Entities.Designer.cs">
+      <DependentUpon>201903290108545_Entities.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -308,6 +316,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809042137085_InitialCreate.resx">
       <DependentUpon>201809042137085_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903290108545_Entities.resx">
+      <DependentUpon>201903290108545_Entities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
