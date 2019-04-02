@@ -6,8 +6,8 @@ namespace ServiciosProfesionales.Entities
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
-        public int ServicioId { get; set; }
         public int FacturaId { get; set; }
+        public int ServicioId { get; set; }
         public decimal Importe { get; set; }
         public decimal Iva16 { get; set; }
         public decimal Iva10 { get; set; }
