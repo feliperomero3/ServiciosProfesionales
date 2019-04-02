@@ -190,10 +190,15 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataContext\Configurations\ApplicationUserConfiguration.cs" />
     <Compile Include="DataContext\Configurations\ClienteConfiguration.cs" />
     <Compile Include="DataContext\Configurations\ContribuyenteConfiguration.cs" />
     <Compile Include="DataContext\Configurations\FacturaConfiguration.cs" />
     <Compile Include="DataContext\Configurations\ServicioConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\IdentityRoleConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\IdentityUserClaimConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\IdentityUserLoginConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\IdentityUserRoleConfiguration.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Contribuyente.cs" />
     <Compile Include="Entities\Factura.cs" />
