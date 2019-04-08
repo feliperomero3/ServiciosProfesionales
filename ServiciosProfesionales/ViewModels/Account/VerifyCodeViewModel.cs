@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ServiciosProfesionales.ViewModels
+namespace ServiciosProfesionales.ViewModels.Account
 {
     public class VerifyCodeViewModel
     {

@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ServiciosProfesionales.ViewModels
+namespace ServiciosProfesionales.ViewModels.Account
 {
-    public class ForgotPasswordViewModel
+    public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

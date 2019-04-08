@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ServiciosProfesionales.ViewModels
+namespace ServiciosProfesionales.ViewModels.Account
 {
     public class SendCodeViewModel
     {

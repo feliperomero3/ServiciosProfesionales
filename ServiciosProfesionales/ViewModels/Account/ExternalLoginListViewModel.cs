@@ -1,4 +1,4 @@
-﻿namespace ServiciosProfesionales.ViewModels
+﻿namespace ServiciosProfesionales.ViewModels.Account
 {
     public class ExternalLoginListViewModel
     {
