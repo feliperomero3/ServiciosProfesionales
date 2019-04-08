@@ -2,7 +2,7 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace ServiciosProfesionales.ViewModels
+namespace ServiciosProfesionales.ViewModels.Manage
 {
     public class ManageLoginsViewModel
     {
