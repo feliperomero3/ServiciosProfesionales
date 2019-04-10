@@ -25,13 +25,13 @@ namespace ServiciosProfesionales.DataContext
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
-            modelBuilder.Configurations.Add(new IdentityRoleConfiguration());
-            modelBuilder.Configurations.Add(new IdentityUserLoginConfiguration());
-            modelBuilder.Configurations.Add(new IdentityUserRoleConfiguration());
-            modelBuilder.Configurations.Add(new IdentityUserClaimConfiguration());
-            
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUser", "Identity");
+            modelBuilder.Entity<IdentityRole>().ToTable("AspNetRole", "Identity");
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("AspNetUserLogin", "Identity");
+            modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole", "Identity");
+            modelBuilder.Entity<IdentityUserClaim>().ToTable("AspNetUserClaim", "Identity");
 
             modelBuilder.Configurations.Add(new ContribuyenteConfiguration());
             modelBuilder.Configurations.Add(new ClienteConfiguration());
