@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using ServiciosProfesionales.DataContext;
 using ServiciosProfesionales.Entities;
@@ -14,12 +9,12 @@ namespace ServiciosProfesionales.Controllers
 {
     public class ContribuyenteController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Contribuyente
         public async Task<ActionResult> Index()
         {
-            return View(await db.Contribuyentes.ToListAsync());
+            return View(await _db.Contribuyentes.ToListAsync());
         }
 
         // GET: Contribuyente/Details/5
@@ -29,11 +24,13 @@ namespace ServiciosProfesionales.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contribuyente contribuyente = await db.Contribuyentes.FindAsync(id);
+
+            Contribuyente contribuyente = await _db.Contribuyentes.FindAsync(id);
             if (contribuyente == null)
             {
                 return HttpNotFound();
             }
+
             return View(contribuyente);
         }
 
@@ -48,12 +45,13 @@ namespace ServiciosProfesionales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,UserId,Rfc,Nombre,Domicilio,Email")] Contribuyente contribuyente)
+        public async Task<ActionResult> Create([Bind(Include = "Id,UserId,Rfc,Nombre,Domicilio,Email")]
+            Contribuyente contribuyente)
         {
             if (ModelState.IsValid)
             {
-                db.Contribuyentes.Add(contribuyente);
-                await db.SaveChangesAsync();
+                _db.Contribuyentes.Add(contribuyente);
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
@@ -67,11 +65,13 @@ namespace ServiciosProfesionales.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contribuyente contribuyente = await db.Contribuyentes.FindAsync(id);
+
+            Contribuyente contribuyente = await _db.Contribuyentes.FindAsync(id);
             if (contribuyente == null)
             {
                 return HttpNotFound();
             }
+
             return View(contribuyente);
         }
 
@@ -80,14 +80,16 @@ namespace ServiciosProfesionales.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,UserId,Rfc,Nombre,Domicilio,Email")] Contribuyente contribuyente)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,UserId,Rfc,Nombre,Domicilio,Email")]
+            Contribuyente contribuyente)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(contribuyente).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                _db.Entry(contribuyente).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+
             return View(contribuyente);
         }
 
@@ -98,11 +100,13 @@ namespace ServiciosProfesionales.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contribuyente contribuyente = await db.Contribuyentes.FindAsync(id);
+
+            Contribuyente contribuyente = await _db.Contribuyentes.FindAsync(id);
             if (contribuyente == null)
             {
                 return HttpNotFound();
             }
+
             return View(contribuyente);
         }
 
@@ -111,9 +115,9 @@ namespace ServiciosProfesionales.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Contribuyente contribuyente = await db.Contribuyentes.FindAsync(id);
-            db.Contribuyentes.Remove(contribuyente);
-            await db.SaveChangesAsync();
+            Contribuyente contribuyente = await _db.Contribuyentes.FindAsync(id);
+            _db.Contribuyentes.Remove(contribuyente);
+            await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -121,8 +125,9 @@ namespace ServiciosProfesionales.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }
