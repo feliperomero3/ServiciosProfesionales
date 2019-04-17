@@ -7,7 +7,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ServiciosProfesionales.Identity;
 using ServiciosProfesionales.Models;
-using ServiciosProfesionales.ViewModels;
 using ServiciosProfesionales.ViewModels.Account;
 
 namespace ServiciosProfesionales.Controllers

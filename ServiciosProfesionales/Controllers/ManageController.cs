@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using ServiciosProfesionales.Identity;
-using ServiciosProfesionales.ViewModels;
 using ServiciosProfesionales.ViewModels.Manage;
 
 namespace ServiciosProfesionales.Controllers
