@@ -10,7 +10,7 @@ namespace ServiciosProfesionales.DataContext
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public ApplicationDbContext() : base("DefaultConnection", false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }

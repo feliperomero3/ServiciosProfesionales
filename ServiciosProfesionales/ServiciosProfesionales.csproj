@@ -188,6 +188,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContribuyenteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataContext\Configurations\ClienteConfiguration.cs" />
@@ -301,6 +302,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Contribuyente\Create.cshtml" />
+    <Content Include="Views\Contribuyente\Delete.cshtml" />
+    <Content Include="Views\Contribuyente\Details.cshtml" />
+    <Content Include="Views\Contribuyente\Edit.cshtml" />
+    <Content Include="Views\Contribuyente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
