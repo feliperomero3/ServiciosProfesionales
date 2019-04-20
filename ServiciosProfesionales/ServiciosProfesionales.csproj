@@ -204,7 +204,7 @@
     </Compile>
     <Compile Include="DataContext\ApplicationDbContext.cs" />
     <Compile Include="Identity\ApplicationSignInManager.cs" />
-    <Compile Include="Entities\Ingreso.cs" />
+    <Compile Include="Entities\Concepto.cs" />
     <Compile Include="Migrations\201809042137085_InitialCreate.cs" />
     <Compile Include="Migrations\201809042137085_InitialCreate.Designer.cs">
       <DependentUpon>201809042137085_InitialCreate.cs</DependentUpon>
@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201903290108545_Entities.cs" />
     <Compile Include="Migrations\201903290108545_Entities.Designer.cs">
       <DependentUpon>201903290108545_Entities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904192250248_EntidadConceptoAntesIngreso.cs" />
+    <Compile Include="Migrations\201904192250248_EntidadConceptoAntesIngreso.Designer.cs">
+      <DependentUpon>201904192250248_EntidadConceptoAntesIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -324,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903290108545_Entities.resx">
       <DependentUpon>201903290108545_Entities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904192250248_EntidadConceptoAntesIngreso.resx">
+      <DependentUpon>201904192250248_EntidadConceptoAntesIngreso.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

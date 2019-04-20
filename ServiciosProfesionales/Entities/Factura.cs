@@ -12,7 +12,7 @@ namespace ServiciosProfesionales.Entities
         public int ContribuyenteId { get; set; }
         public int ClienteId { get; set; }
         
-        public ICollection<Ingreso> Ingresos { get; set; }
+        public ICollection<Concepto> Conceptos { get; set; }
         public Contribuyente Contribuyente { get; set; }
         public Cliente Cliente { get; set; }
     }

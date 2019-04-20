@@ -18,7 +18,7 @@ namespace ServiciosProfesionales.DataContext
         public DbSet<Contribuyente> Contribuyentes { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Factura> Facturas { get; set; }
-        public DbSet<Ingreso> Ingresos { get; set; }
+        public DbSet<Concepto> Conceptos { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

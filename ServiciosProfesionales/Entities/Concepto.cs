@@ -2,7 +2,7 @@
 
 namespace ServiciosProfesionales.Entities
 {
-    public class Ingreso
+    public class Concepto
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
