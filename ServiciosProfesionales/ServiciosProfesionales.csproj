@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ContribuyenteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ServicioController.cs" />
     <Compile Include="DataContext\Configurations\ClienteConfiguration.cs" />
     <Compile Include="DataContext\Configurations\ContribuyenteConfiguration.cs" />
     <Compile Include="DataContext\Configurations\FacturaConfiguration.cs" />
@@ -311,6 +312,11 @@
     <Content Include="Views\Contribuyente\Details.cshtml" />
     <Content Include="Views\Contribuyente\Edit.cshtml" />
     <Content Include="Views\Contribuyente\Index.cshtml" />
+    <Content Include="Views\Servicio\Create.cshtml" />
+    <Content Include="Views\Servicio\Delete.cshtml" />
+    <Content Include="Views\Servicio\Details.cshtml" />
+    <Content Include="Views\Servicio\Edit.cshtml" />
+    <Content Include="Views\Servicio\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
