@@ -9,12 +9,12 @@ namespace ServiciosProfesionales.Controllers
 {
     public class ServicioController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Servicio
         public async Task<ActionResult> Index()
         {
-            return View(await db.Servicios.ToListAsync());
+            return View(await _db.Servicios.ToListAsync());
         }
 
         // GET: Servicio/Details/5
@@ -25,7 +25,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await db.Servicios.FindAsync(id);
+            Servicio servicio = await _db.Servicios.FindAsync(id);
             if (servicio == null)
             {
                 return HttpNotFound();
@@ -50,8 +50,8 @@ namespace ServiciosProfesionales.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Servicios.Add(servicio);
-                await db.SaveChangesAsync();
+                _db.Servicios.Add(servicio);
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +66,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await db.Servicios.FindAsync(id);
+            Servicio servicio = await _db.Servicios.FindAsync(id);
 
             if (servicio == null)
             {
@@ -86,8 +86,8 @@ namespace ServiciosProfesionales.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(servicio).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                _db.Entry(servicio).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
@@ -102,7 +102,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await db.Servicios.FindAsync(id);
+            Servicio servicio = await _db.Servicios.FindAsync(id);
 
             if (servicio == null)
             {
@@ -117,9 +117,9 @@ namespace ServiciosProfesionales.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Servicio servicio = await db.Servicios.FindAsync(id);
-            db.Servicios.Remove(servicio);
-            await db.SaveChangesAsync();
+            Servicio servicio = await _db.Servicios.FindAsync(id);
+            _db.Servicios.Remove(servicio);
+            await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -127,7 +127,7 @@ namespace ServiciosProfesionales.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
 
             base.Dispose(disposing);
