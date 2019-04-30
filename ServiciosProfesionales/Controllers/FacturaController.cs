@@ -9,12 +9,12 @@ namespace ServiciosProfesionales.Controllers
 {
     public class FacturaController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Factura
         public async Task<ActionResult> Index()
         {
-            var facturas = db.Facturas.Include(f => f.Cliente).Include(f => f.Contribuyente);
+            var facturas = _db.Facturas.Include(f => f.Cliente).Include(f => f.Contribuyente);
             return View(await facturas.ToListAsync());
         }
 
@@ -26,7 +26,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var factura = await db.Facturas.FindAsync(id);
+            var factura = await _db.Facturas.FindAsync(id);
             if (factura == null)
             {
                 return HttpNotFound();
@@ -38,8 +38,8 @@ namespace ServiciosProfesionales.Controllers
         // GET: Factura/Create
         public ActionResult Create()
         {
-            ViewBag.ClienteId = new SelectList(db.Clientes, "Id", "RazonSocial");
-            ViewBag.ContribuyenteId = new SelectList(db.Contribuyentes, "Id", "Rfc");
+            ViewBag.ClienteId = new SelectList(_db.Clientes, "Id", "RazonSocial");
+            ViewBag.ContribuyenteId = new SelectList(_db.Contribuyentes, "Id", "Rfc");
             return View();
         }
 
@@ -53,13 +53,13 @@ namespace ServiciosProfesionales.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Facturas.Add(factura);
-                await db.SaveChangesAsync();
+                _db.Facturas.Add(factura);
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClienteId = new SelectList(db.Clientes, "Id", "RazonSocial", factura.ClienteId);
-            ViewBag.ContribuyenteId = new SelectList(db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
+            ViewBag.ClienteId = new SelectList(_db.Clientes, "Id", "RazonSocial", factura.ClienteId);
+            ViewBag.ContribuyenteId = new SelectList(_db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
             return View(factura);
         }
 
@@ -71,14 +71,14 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var factura = await db.Facturas.FindAsync(id);
+            var factura = await _db.Facturas.FindAsync(id);
             if (factura == null)
             {
                 return HttpNotFound();
             }
 
-            ViewBag.ClienteId = new SelectList(db.Clientes, "Id", "RazonSocial", factura.ClienteId);
-            ViewBag.ContribuyenteId = new SelectList(db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
+            ViewBag.ClienteId = new SelectList(_db.Clientes, "Id", "RazonSocial", factura.ClienteId);
+            ViewBag.ContribuyenteId = new SelectList(_db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
             return View(factura);
         }
 
@@ -92,13 +92,13 @@ namespace ServiciosProfesionales.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(factura).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                _db.Entry(factura).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClienteId = new SelectList(db.Clientes, "Id", "RazonSocial", factura.ClienteId);
-            ViewBag.ContribuyenteId = new SelectList(db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
+            ViewBag.ClienteId = new SelectList(_db.Clientes, "Id", "RazonSocial", factura.ClienteId);
+            ViewBag.ContribuyenteId = new SelectList(_db.Contribuyentes, "Id", "Rfc", factura.ContribuyenteId);
             return View(factura);
         }
 
@@ -110,7 +110,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var factura = await db.Facturas.FindAsync(id);
+            var factura = await _db.Facturas.FindAsync(id);
             if (factura == null)
             {
                 return HttpNotFound();
@@ -124,9 +124,9 @@ namespace ServiciosProfesionales.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            var factura = await db.Facturas.FindAsync(id);
-            db.Facturas.Remove(factura);
-            await db.SaveChangesAsync();
+            var factura = await _db.Facturas.FindAsync(id);
+            _db.Facturas.Remove(factura);
+            await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -134,7 +134,7 @@ namespace ServiciosProfesionales.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
 
             base.Dispose(disposing);

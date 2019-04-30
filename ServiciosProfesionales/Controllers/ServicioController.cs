@@ -9,7 +9,7 @@ namespace ServiciosProfesionales.Controllers
 {
     public class ServicioController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
+        private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Servicio
         public async Task<ActionResult> Index()
@@ -25,7 +25,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await _db.Servicios.FindAsync(id);
+            var servicio = await _db.Servicios.FindAsync(id);
             if (servicio == null)
             {
                 return HttpNotFound();
@@ -66,7 +66,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await _db.Servicios.FindAsync(id);
+            var servicio = await _db.Servicios.FindAsync(id);
 
             if (servicio == null)
             {
@@ -102,7 +102,7 @@ namespace ServiciosProfesionales.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Servicio servicio = await _db.Servicios.FindAsync(id);
+            var servicio = await _db.Servicios.FindAsync(id);
 
             if (servicio == null)
             {
@@ -117,7 +117,7 @@ namespace ServiciosProfesionales.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Servicio servicio = await _db.Servicios.FindAsync(id);
+            var servicio = await _db.Servicios.FindAsync(id);
             _db.Servicios.Remove(servicio);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
