@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201904192250248_EntidadConceptoAntesIngreso.Designer.cs">
       <DependentUpon>201904192250248_EntidadConceptoAntesIngreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904302254276_FacturaClienteIdNull.cs" />
+    <Compile Include="Migrations\201904302254276_FacturaClienteIdNull.Designer.cs">
+      <DependentUpon>201904302254276_FacturaClienteIdNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
@@ -343,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904192250248_EntidadConceptoAntesIngreso.resx">
       <DependentUpon>201904192250248_EntidadConceptoAntesIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904302254276_FacturaClienteIdNull.resx">
+      <DependentUpon>201904302254276_FacturaClienteIdNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

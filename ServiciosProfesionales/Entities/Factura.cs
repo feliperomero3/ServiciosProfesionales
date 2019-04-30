@@ -10,7 +10,7 @@ namespace ServiciosProfesionales.Entities
         public string Numero { get; set; }
         public DateTime Fecha { get; set; }
         public int ContribuyenteId { get; set; }
-        public int ClienteId { get; set; }
+        public int? ClienteId { get; set; }
         
         public ICollection<Concepto> Conceptos { get; set; }
         public Contribuyente Contribuyente { get; set; }
