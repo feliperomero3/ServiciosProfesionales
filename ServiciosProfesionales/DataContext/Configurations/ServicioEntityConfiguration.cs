@@ -3,15 +3,15 @@ using ServiciosProfesionales.Entities;
 
 namespace ServiciosProfesionales.DataContext.Configurations
 {
-    public class FacturaConfiguration : EntityTypeConfiguration<Factura>
+    public class ServicioEntityConfiguration : EntityTypeConfiguration<Servicio>
     {
-        public FacturaConfiguration()
+        public ServicioEntityConfiguration()
         {
-            Property(p => p.FolioFiscal)
+            Property(p => p.Nombre)
                 .HasMaxLength(128)
                 .IsUnicode(false);
 
-            Property(p => p.Numero)
+            Property(p => p.Descripcion)
                 .HasMaxLength(128)
                 .IsUnicode(false);
         }

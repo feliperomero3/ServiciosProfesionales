@@ -193,10 +193,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
-    <Compile Include="DataContext\Configurations\ClienteConfiguration.cs" />
-    <Compile Include="DataContext\Configurations\ContribuyenteConfiguration.cs" />
-    <Compile Include="DataContext\Configurations\FacturaConfiguration.cs" />
-    <Compile Include="DataContext\Configurations\ServicioConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\ClienteEntityConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\ContribuyenteEntityConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\FacturaEntityConfiguration.cs" />
+    <Compile Include="DataContext\Configurations\ServicioEntityConfiguration.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Contribuyente.cs" />
     <Compile Include="Entities\Factura.cs" />

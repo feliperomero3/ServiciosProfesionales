@@ -3,9 +3,9 @@ using ServiciosProfesionales.Entities;
 
 namespace ServiciosProfesionales.DataContext.Configurations
 {
-    public class ContribuyenteConfiguration : EntityTypeConfiguration<Contribuyente>
+    public class ContribuyenteEntityConfiguration : EntityTypeConfiguration<Contribuyente>
     {
-        public ContribuyenteConfiguration()
+        public ContribuyenteEntityConfiguration()
         {
             Property(p => p.UserId).HasMaxLength(128);
 

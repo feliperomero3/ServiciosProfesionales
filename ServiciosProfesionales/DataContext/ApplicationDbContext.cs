@@ -33,10 +33,10 @@ namespace ServiciosProfesionales.DataContext
             modelBuilder.Entity<IdentityUserRole>().ToTable("AspNetUserRole", "Identity");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("AspNetUserClaim", "Identity");
 
-            modelBuilder.Configurations.Add(new ContribuyenteConfiguration());
-            modelBuilder.Configurations.Add(new ClienteConfiguration());
-            modelBuilder.Configurations.Add(new FacturaConfiguration());
-            modelBuilder.Configurations.Add(new ServicioConfiguration());
+            modelBuilder.Configurations.Add(new ContribuyenteEntityConfiguration());
+            modelBuilder.Configurations.Add(new ClienteEntityConfiguration());
+            modelBuilder.Configurations.Add(new FacturaEntityConfiguration());
+            modelBuilder.Configurations.Add(new ServicioEntityConfiguration());
         }
     }
 }

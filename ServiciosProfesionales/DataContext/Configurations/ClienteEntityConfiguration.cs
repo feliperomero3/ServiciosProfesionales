@@ -3,9 +3,9 @@ using ServiciosProfesionales.Entities;
 
 namespace ServiciosProfesionales.DataContext.Configurations
 {
-    public class ClienteConfiguration : EntityTypeConfiguration<Cliente>
+    public class ClienteEntityConfiguration : EntityTypeConfiguration<Cliente>
     {
-        public ClienteConfiguration()
+        public ClienteEntityConfiguration()
         {
             Property(p => p.RazonSocial)
                 .HasMaxLength(128)
