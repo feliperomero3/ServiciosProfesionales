@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201904302254276_FacturaClienteIdNull.Designer.cs">
       <DependentUpon>201904302254276_FacturaClienteIdNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905072324538_ServicioClaveUniqueIndex.cs" />
+    <Compile Include="Migrations\201905072324538_ServicioClaveUniqueIndex.Designer.cs">
+      <DependentUpon>201905072324538_ServicioClaveUniqueIndex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
@@ -350,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904302254276_FacturaClienteIdNull.resx">
       <DependentUpon>201904302254276_FacturaClienteIdNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905072324538_ServicioClaveUniqueIndex.resx">
+      <DependentUpon>201905072324538_ServicioClaveUniqueIndex.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
